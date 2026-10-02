@@ -37,3 +37,11 @@ Results are fictional and prominently marked as a demo. There is no spreadsheet 
 ## Validation
 
 Production build passed. Browser checks in Chromium covered navigation, result filters, ID search, empty state/reset, direct result route reload, FAQ, contact navigation, mobile overflow, and reduced-motion behavior. No browser JavaScript exceptions were observed.
+
+## Teachers Panel
+
+The Home page includes a portrait-strip Teachers Panel inspired by the supplied reference. Selecting a portrait opens an accessible sliding side dialog with the teacher name, teaching area, and qualifications. It supports touch, keyboard activation, Escape, backdrop/close buttons, and returning focus to the selected portrait. Portraits scroll horizontally on small screens.
+
+All seven current portraits and profiles are explicitly marked placeholders. To add real teachers, edit `src/teachers.js`: set `name`, `subject`, `qualifications` (an array), `photo`, and `placeholder: false`. Store approved photos in `public/teachers/`, then reference them as `/teachers/your-photo.jpg`. The current `.map()` supplies shared placeholder fields; replace it with complete individual profile objects when adding real data. Never publish credentials or personal contact details without approval.
+
+Teacher browser checks passed for all seven profiles, image loading, keyboard activation, modal focus, closing methods, and mobile bounds. Existing results checks still pass.
